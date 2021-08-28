@@ -1,13 +1,389 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  min-height: 100vh;
 }
+
+/* Header */ /* #region */
+header {
+  width: 100%;
+  height: 110px;
+  background-color: #f55;
+  text-align: center;
+  position: fixed;
+  box-shadow: 0 3px 8px #999;
+}
+
+.poketitle {
+  height: 86px;
+  margin-top: 12px;
+}
+
+.up-btn {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  border-radius: 50%;
+  border: 4px solid #66c;
+  background-color: #fff;
+  background-color: #fd0;
+  color: #333;
+  color: #66c;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: -1px 3px 8px #333;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  header {
+    height: 70px;
+  }
+
+  .poketitle {
+    height: 60px;
+    margin-top: 5px;
+  }
+
+  .up-btn {
+    top: 15px;
+    right: 12px;
+  }
+}
+
+/* #endregion */
+
+/* Gallery */ /* #region */
+.gallery {
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokecard {
+  width: 260px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: -5px 5px 5px #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(#66f 60%, transparent 0%);
+}
+
+.img-box img {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.info-box {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.types-box {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #ccc;
+}
+
+.type {
+  width: 112px;
+  height: 30px;
+  margin: 0 2px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: "Luckiest Guy", cursive;
+  /* font-family: "Titan One", cursive; */
+  color: #fff;
+  -webkit-text-stroke: 0.8px #000;
+  box-sizing: content-box;
+}
+
+@media screen and (max-width: 620px) {
+  .gallery {
+    min-height: calc(100vh - 40px);
+    padding: 0px 0px;
+  }
+
+  .pokecard {
+    width: 95px;
+    height: 190px;
+    margin: 5px;
+  }
+
+  .img-box {
+    height: 90px;
+  }
+
+  .img-box img {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  .info-box {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .types-box {
+    min-height: 80px;
+    flex-direction: column;
+  }
+
+  .type {
+    width: 80px;
+    height: 18px;
+    margin: 2px 0px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+/* #endregion */
+
+/* Filter */ /* #region */
+.filters {
+  max-width: 800px;
+  margin: 130px auto 0px auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: wheat;
+}
+
+.filters-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.filters-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-btn {
+  width: 105px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 4px;
+  font-size: 12px;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none !important;
+  cursor: pointer;
+}
+
+.type-unselected {
+  background-color: #ddd !important;
+  color: #aaa !important;
+}
+
+.reset {
+  width: 150px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #d55;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  .filters {
+    margin: 70px 0 5px 0;
+  }
+
+  .filters-container {
+    padding: 10px 10px;
+  }
+
+  .type-btn {
+    width: 85px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 4px;
+    font-size: 12px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border: none !important;
+    cursor: pointer;
+  }
+
+  .type-unselected {
+    background-color: #ddd !important;
+    color: #aaa !important;
+  }
+
+  .reset {
+    width: 150px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #d55;
+    cursor: pointer;
+  }
+}
+
+/* #endregion */
+
+/* Types */ /* #region */
+.bug {
+  background-color: #729f3f;
+  border: 4px solid #92bf5f;
+}
+.dark {
+  background-color: #707070;
+  border: 4px solid #505050;
+}
+.dragon {
+  background-color: #f35352;
+  border: 4px solid #b35352;
+}
+.electric {
+  background-color: #eed535;
+  border: 4px solid #deb535;
+}
+.fairy {
+  background-color: #fdb9e9;
+  border: 4px solid #dda9d9;
+}
+.fighting {
+  background-color: #d56723;
+  border: 4px solid #f5a743;
+}
+.fire {
+  background-color: #fd7d24;
+  border: 4px solid #ffad54;
+}
+.flying {
+  background-color: #229999;
+  border: 4px solid #72c5c5;
+}
+.ghost {
+  background-color: #7b62a3;
+  border: 4px solid #ab92d3;
+}
+.grass {
+  background-color: #9bcc50;
+  border: 4px solid #cbdc70;
+}
+.ground {
+  background-color: #c3bc01;
+  border: 4px solid #d3dc01;
+}
+.ice {
+  background-color: #51c4e7;
+  border: 4px solid #91e4f7;
+}
+.normal {
+  background-color: #a4acaf;
+  border: 4px solid #949c9f;
+}
+.poison {
+  background-color: #b97fc9;
+  border: 4px solid #d99fd9;
+}
+.psychic {
+  background-color: #f366b9;
+  border: 4px solid #f396d9;
+}
+.rock {
+  background-color: #a38c21;
+  border: 4px solid #c3ac41;
+}
+.steel {
+  background-color: #9eb7b8;
+  border: 4px solid #aed7d8;
+}
+.water {
+  background-color: #4592c4;
+  border: 4px solid #75c2d4;
+}
+/* #endregion */
+
+/* Footer */ /* #region */
+footer {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f55;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* #endregion */

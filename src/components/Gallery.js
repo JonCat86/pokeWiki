@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FilterBox from "./FilterBox";
+import Loader from "./Loader";
 import Modal from "./Modal";
 
 import PokeCard from "./PokeCard";
@@ -95,13 +96,17 @@ const Gallery = () => {
     <div className="gallery">
       <FilterBox handleClick={handleClick} />
       <div className="cards-container">
-        {isLoaded && pokemons.length > 0
-          ? pokemons.map((el) => (
-              <PokeCard key={el.id} pokemon={el} openModal={openModal} />
-            ))
-          : data.map((el) => (
-              <PokeCard key={el.id} pokemon={el} openModal={openModal} />
-            ))}
+        {!isLoaded ? (
+          <Loader />
+        ) : pokemons.length > 0 ? (
+          pokemons.map((el) => (
+            <PokeCard key={el.id} pokemon={el} openModal={openModal} />
+          ))
+        ) : (
+          data.map((el) => (
+            <PokeCard key={el.id} pokemon={el} openModal={openModal} />
+          ))
+        )}
       </div>
       {modalIsOpen && (
         <Modal modalPokemon={modalPokemon} closeModal={closeModal} />

@@ -71,7 +71,6 @@ header {
   width: 100%;
   min-height: calc(100vh - 40px);
   padding: 0px 20px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -379,7 +378,7 @@ header {
 /* Modal */ /* #region */
 .modal-container {
   width: 100%;
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 150px);
   position: fixed;
   left: 0;
   top: 110px;
@@ -769,8 +768,12 @@ header {
 /* Loader */ /* #region */
 
 .loader {
+  min-height: calc(100vh - 40px);
   text-align: center;
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .loader img {
   width: 100px;

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pokeWiki/static/css/main.46f9a9c5.chunk.css",
-    "main.js": "/pokeWiki/static/js/main.815e59c2.chunk.js",
-    "main.js.map": "/pokeWiki/static/js/main.815e59c2.chunk.js.map",
+    "main.css": "/pokeWiki/static/css/main.58b72155.chunk.css",
+    "main.js": "/pokeWiki/static/js/main.3ebbe9fb.chunk.js",
+    "main.js.map": "/pokeWiki/static/js/main.3ebbe9fb.chunk.js.map",
     "runtime-main.js": "/pokeWiki/static/js/runtime-main.a4366ceb.js",
     "runtime-main.js.map": "/pokeWiki/static/js/runtime-main.a4366ceb.js.map",
-    "static/js/2.384b936b.chunk.js": "/pokeWiki/static/js/2.384b936b.chunk.js",
-    "static/js/2.384b936b.chunk.js.map": "/pokeWiki/static/js/2.384b936b.chunk.js.map",
+    "static/js/2.3097ea52.chunk.js": "/pokeWiki/static/js/2.3097ea52.chunk.js",
+    "static/js/2.3097ea52.chunk.js.map": "/pokeWiki/static/js/2.3097ea52.chunk.js.map",
     "index.html": "/pokeWiki/index.html",
-    "static/css/main.46f9a9c5.chunk.css.map": "/pokeWiki/static/css/main.46f9a9c5.chunk.css.map",
-    "static/js/2.384b936b.chunk.js.LICENSE.txt": "/pokeWiki/static/js/2.384b936b.chunk.js.LICENSE.txt",
+    "static/css/main.58b72155.chunk.css.map": "/pokeWiki/static/css/main.58b72155.chunk.css.map",
+    "static/js/2.3097ea52.chunk.js.LICENSE.txt": "/pokeWiki/static/js/2.3097ea52.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pokeWiki/static/media/stat-bg5.5a5a61c7.jpg",
     "static/media/modal-bg3.4c461fbb.jpg": "/pokeWiki/static/media/modal-bg3.4c461fbb.jpg",
     "static/media/pokeball-loading.a835fb9b.png": "/pokeWiki/static/media/pokeball-loading.a835fb9b.png",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a4366ceb.js",
-    "static/js/2.384b936b.chunk.js",
-    "static/css/main.46f9a9c5.chunk.css",
-    "static/js/main.815e59c2.chunk.js"
+    "static/js/2.3097ea52.chunk.js",
+    "static/css/main.58b72155.chunk.css",
+    "static/js/main.3ebbe9fb.chunk.js"
   ]
 }
